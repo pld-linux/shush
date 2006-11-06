@@ -1,0 +1,18 @@
+--- shush-1.0.2/configure.ac~	2006-01-08 03:21:24.000000000 +0200
++++ shush-1.0.2/configure.ac	2006-11-07 00:30:20.421181640 +0200
+@@ -11,9 +11,13 @@
+ AC_PROG_CC
+ test "x$GCC" = "xyes" && CFLAGS="$CFLAGS -fno-builtin-log"
+ AC_PROG_INSTALL
+-AC_PATH_PROG([SENDMAIL], [sendmail], [NOSENDMAIL], [/usr/lib:/usr/sbin:$PATH])
++if test -z "$SENDMAIL"; then
++	AC_PATH_PROG([SENDMAIL], [sendmail], [NOSENDMAIL], [/usr/lib:/usr/sbin:$PATH])
++fi
+ AC_DEFINE_UNQUOTED([SENDMAIL], ["$SENDMAIL"], [Path to sendmail program])
+-AC_PATH_PROG([CRONTAB], [crontab], [NOCRONTAB])
++if test -z "$CRONTAB"; then
++	AC_PATH_PROG([CRONTAB], [crontab], [NOCRONTAB])
++fi
+ AC_DEFINE_UNQUOTED([CRONTAB], ["$CRONTAB"], [Path to crontab program])
+ 
+ # Pthreads, please..

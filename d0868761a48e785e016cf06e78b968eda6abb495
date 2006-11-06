@@ -1,0 +1,3 @@
+- add BR and R: crondaemon. Why? Well, shush searches for it at configure time
+  and adds apropriate functionality to the program.  If cron isn't available at
+  configure time, shush won't recognize it even if you install it later.

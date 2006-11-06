@@ -1,3 +1,5 @@
+# TODO
+# - patch source not to BR: crondaemon
 Summary:	A wrapper around cron jobs
 Summary(pl):	Wrapper dla zadañ cronowych
 Name:		shush
@@ -41,7 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-#LICENSE file is required (read it)
+# LICENSE file is required (read it)
 %doc CHANGES LICENSE
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/shush
 %{_mandir}/man1/*.1*

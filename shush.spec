@@ -1,5 +1,5 @@
-Summary:	A wrapper around cron jobs.
-Summary(pl):	Wrapper dla zadañ cronowych.
+Summary:	A wrapper around cron jobs
+Summary(pl):	Wrapper dla zadañ cronowych
 Name:		shush
 Version:	1.0.2
 Release:	1

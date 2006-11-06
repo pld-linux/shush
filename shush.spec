@@ -9,7 +9,9 @@ Source0:	http://web.taranis.org/shush/dist/%{name}-%{version}.tgz
 # Source0-md5:	e08e7be994060e549627d205040734dd
 Patch0:		%{name}-Makefile.patch
 URL:		http://web.taranis.org/shush/
+BuildRequires:	crondaemon
 BuildRequires:	pcre-devel
+Requires:	crondaemon
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

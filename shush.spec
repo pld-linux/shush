@@ -1,5 +1,5 @@
-# TODO
-# - patch source not to BR: crondaemon
+# NB!
+# - anacron provides crondaemon but no crontab binary!
 Summary:	A wrapper around cron jobs
 Summary(pl):	Wrapper dla zadañ cronowych
 Name:		shush
@@ -10,8 +10,9 @@ Group:		Applications/Console
 Source0:	http://web.taranis.org/shush/dist/%{name}-%{version}.tgz
 # Source0-md5:	e08e7be994060e549627d205040734dd
 Patch0:		%{name}-Makefile.patch
+Patch1:		%{name}-progs.patch
 URL:		http://web.taranis.org/shush/
-BuildRequires:	crondaemon
+BuildRequires:	autoconf
 BuildRequires:	pcre-devel
 Requires:	crondaemon
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -27,8 +28,11 @@ poprzez email. Jest to potê¿ny wrapper dla zadañ cronowych.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
+export SENDMAIL=/usr/lib/sendmail
+export CRONTAB=/usr/bin/crontab
 %configure
 %{__make}
 

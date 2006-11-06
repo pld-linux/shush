@@ -14,7 +14,8 @@ Patch1:		%{name}-progs.patch
 URL:		http://web.taranis.org/shush/
 BuildRequires:	autoconf
 BuildRequires:	pcre-devel
-Requires:	crondaemon
+Requires:	/usr/bin/crontab
+Requires:	/usr/lib/sendmail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

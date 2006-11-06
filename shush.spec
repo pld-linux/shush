@@ -3,13 +3,13 @@ Summary(pl):	Wrapper dla zadañ cronowych
 Name:		shush
 Version:	1.0.2
 Release:	1
-License:	Distributable Custom License (see LICENSE doc)
+License:	custom, distributable
 Group:		Applications/Console
 Source0:	http://web.taranis.org/shush/dist/%{name}-%{version}.tgz
 # Source0-md5:	e08e7be994060e549627d205040734dd
 Patch0:		%{name}-Makefile.patch
 URL:		http://web.taranis.org/shush/
-#BuildRequires:	-
+BuildRequires:	pcre-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

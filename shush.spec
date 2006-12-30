@@ -1,14 +1,15 @@
 # NB!
 # - anacron provides crondaemon but no crontab binary!
+%define	_beta	b2
 Summary:	A wrapper around cron jobs
 Summary(pl):	Wrapper dla zadañ cronowych
 Name:		shush
-Version:	1.0.2
-Release:	1
+Version:	1.1
+Release:	0.%{_beta}.1
 License:	custom, distributable
 Group:		Applications/Console
-Source0:	http://web.taranis.org/shush/dist/%{name}-%{version}.tgz
-# Source0-md5:	e08e7be994060e549627d205040734dd
+Source0:	http://web.taranis.org/shush/dist/%{name}-%{version}%{_beta}.tgz
+# Source0-md5:	0b8fd87f6e12a3e9bf55cc8bd349a3d8
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-progs.patch
 URL:		http://web.taranis.org/shush/
@@ -27,7 +28,7 @@ Shush wykonuje komendê i opcjonalnie wysy³a wynik jej dzia³ania
 poprzez email. Jest to potê¿ny wrapper dla zadañ cronowych.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_beta}
 %patch0 -p1
 %patch1 -p1
 

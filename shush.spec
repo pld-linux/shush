@@ -1,7 +1,7 @@
 # NB!
 # - anacron provides crondaemon but no crontab binary!
 Summary:	A wrapper around cron jobs
-Summary(pl):	Wrapper dla zadañ cronowych
+Summary(pl.UTF-8):   Wrapper dla zadaÅ„ cronowych
 Name:		shush
 Version:	1.0.2
 Release:	1
@@ -22,9 +22,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Shush runs a command and optionally reports its output by email. It is
 a powerful wrapper around cron jobs.
 
-%description -l pl
-Shush wykonuje komendê i opcjonalnie wysy³a wynik jej dzia³ania
-poprzez email. Jest to potê¿ny wrapper dla zadañ cronowych.
+%description -l pl.UTF-8
+Shush wykonuje komendÄ™ i opcjonalnie wysyÅ‚a wynik jej dziaÅ‚ania
+poprzez email. Jest to potÄ™Å¼ny wrapper dla zadaÅ„ cronowych.
 
 %prep
 %setup -q

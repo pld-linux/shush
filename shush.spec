@@ -1,7 +1,7 @@
 # NB!
 # - anacron provides crondaemon but no crontab binary!
 Summary:	A wrapper around cron jobs
-Summary(pl.UTF-8):   Wrapper dla zadań cronowych
+Summary(pl.UTF-8):	Wrapper dla zadań cronowych
 Name:		shush
 Version:	1.0.2
 Release:	1

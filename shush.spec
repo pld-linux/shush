@@ -3,12 +3,12 @@
 Summary:	A wrapper around cron jobs
 Summary(pl.UTF-8):	Wrapper dla zadań cronowych
 Name:		shush
-Version:	1.1.1
+Version:	1.2.2
 Release:	1
 License:	custom, distributable
 Group:		Applications/Console
 Source0:	http://web.taranis.org/shush/dist/%{name}-%{version}.tgz
-# Source0-md5:	080bd373d7886ad22e30dfef19f8c151
+# Source0-md5:	a1791c28a848e3d12d73a84e8a41e822
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-progs.patch
 URL:		http://web.taranis.org/shush/
